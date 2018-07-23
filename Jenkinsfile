@@ -32,7 +32,7 @@ stages{
  
                 stage ("Deploy to Production"){
                     steps {
-                        sh 'scp -i /home/losmith/AWS/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps'
+                        sh 'cp -i /home/losmith/AWS/tomcat-demo.pem **/target/*.war /opt/tomcat/apache-tomcat-8.5.32-prod/webapps'
                     }
                 }
             }
