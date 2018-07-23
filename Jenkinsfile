@@ -27,7 +27,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                       sh 'scp -i /home/losmith/AWS/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps'
+                       sh 'sudo scp -i /home/losmith/AWS/tomcat-demo.pem **/target/*.war ec2-user@18.217.165.183:/var/lib/tomcat7/webapps'
                     }
                 }
  
