@@ -32,7 +32,7 @@ stages{
  
                 stage ("Deploy to Production"){
                     steps {
-                        sh 'cp -i /home/losmith/AWS/tomcat-demo.pem **/target/*.war /opt/tomcat/apache-tomcat-8.5.32-prod/webapps'
+                        sh 'cp **/target/*.war /opt/tomcat/apache-tomcat-8.5.32-prod/webapps'
                     }
                 }
             }
